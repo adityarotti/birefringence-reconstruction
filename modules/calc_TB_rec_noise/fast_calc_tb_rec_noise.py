@@ -1,5 +1,5 @@
 import numpy as np
-from tb_noise_sampL import rec_noise
+from .tb_noise_sampL import rec_noise
 
 def calc_tb_rec_noise(clte_thry,cltt_obs,clbb_obs,ellmin,ellmax,Lmax,nsamples=40):
     Larray=np.linspace(1,Lmax,nsamples,dtype=np.int).astype(np.float64)

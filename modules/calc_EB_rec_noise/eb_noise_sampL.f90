@@ -31,7 +31,7 @@ do i=1,Lsize
       do k=1,int(min(k1max,ellmax*1.d0)-k1min)+1
          l1=k1min+float(k-1)
          tempvar=(clee_thry(int(lp))**2.)/(clbb_obs(int(l1))*clee_obs(int(lp)))
-         tempvar=tempvar*(wig3j(k)**2.d0)*(2.d0*lp+1.d0)*(2.d0*l1+1.d0)/(4.d0*pi)
+         tempvar=tempvar*(wig3j(k)**2.d0)*(2.d0*lp+1.d0)*(2.d0*l1+1.d0)*4.d0/(4.d0*pi)
          if (mod(int(L+lp+l1),2).eq.0) then
 !         	write(*,*) L,lp,l1,"Even",wig3j(k)
          	rec_noise(i)=rec_noise(i) + tempvar
